@@ -55,13 +55,18 @@ public class Matches {
         ArrayList<Integer> matches = MatchesWithSeeds();
         ArrayList<ArrayList<Integer>> matchSets = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> pairs = new ArrayList<Integer>();
-        for (int i = 0; i <= matches.size() - 1; i+=2) {
+        for (int i = 0; i <= matches.size() - 1; i += 2) {
             pairs.add(matches.get(i));
             pairs.add(matches.get(i + 1));
             matchSets.add(new ArrayList<>(pairs));
             pairs.clear();
         }
+
+
+
+
         Collections.shuffle(matchSets);
+        System.out.println(matchSets);
         return matchSets;
     }
 
